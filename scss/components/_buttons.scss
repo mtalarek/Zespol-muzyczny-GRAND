@@ -1,0 +1,33 @@
+ %btn {
+    border-radius: 30px;
+    border: none;
+    padding: 10px 40px;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 21px;
+    transition: all 0.2s;
+
+    @media (max-width: $medium) {
+        font-size: 13px;
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: $primary-color;
+
+    &:hover {
+        background-color: lightgreen;
+    }
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: rgb(231, 40, 40);
+
+    &:hover {
+        background-color: rgb(228, 86, 86);
+    }
+}

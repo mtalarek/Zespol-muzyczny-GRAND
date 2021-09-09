@@ -1,0 +1,107 @@
+.team {
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .instruments {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 50px;
+
+        .instrument {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position:center;
+            opacity: 0.9;
+            position: relative;
+            transition: all 0.7s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .hover {
+                position: absolute;
+                width: 90%;
+                height: 90%;
+                top: 0;
+                opacity: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background-color: $primary-color;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 20px;
+                text-shadow: 0 0 20px black;
+                transition: all 0.7s;
+
+                h3 {
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                }
+
+                h4 {
+                    margin: 0;
+                }
+            }
+        }
+
+        .instrument:hover {
+            margin-bottom: 170px;
+
+            .hover {
+                top: 150px;
+                opacity: 0.9;
+            }
+        }
+
+        .drums {
+            background-image: url("../img/sylwek.jpg");   
+        }
+
+        .bass {
+            background-image: url("../img/michal.jpg");
+        }
+
+        .guitar {
+            background-image: url("../img/marcin.jpg");
+        }
+
+        .synth {
+            background-image: url("../img/darek.jpg");
+        }
+
+        .akordeon {
+            background-image: url("../img/arek.jpg");
+        }
+
+        @media all and (max-width: $medium) {
+            
+            .instrument {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media all and (max-width: $small) {
+            
+            .instrument {
+                .hover {
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    h4 {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

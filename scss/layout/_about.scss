@@ -1,0 +1,41 @@
+.about {
+    width: 80%;
+    text-align: center;
+    
+    .nav {
+        width: 60%;
+        margin: 0 auto;
+
+        p {
+            margin-top: 50px;
+        }
+    }
+
+    .items {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+
+        .item {
+            flex-basis: 28%;
+
+            i {
+                color: $primary-color;
+                font-size: 40px;
+            }
+        }
+    }
+
+    @media all and (max-width: $small) {
+        .nav {
+            width: 100%;
+        }
+
+        .items {
+            flex-direction: column;
+            .item {
+                flex-basis: 100%;
+            }    
+        }
+    }
+}

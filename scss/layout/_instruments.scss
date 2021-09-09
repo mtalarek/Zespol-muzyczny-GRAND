@@ -1,0 +1,80 @@
+.band {
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .instruments {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 50px;
+
+        .instrument {
+            
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position:center;
+            opacity: 0.9;
+            position: relative;
+            
+            .hover {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(83, 165, 2, 0.9);
+                border-radius: 50%;
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 20px;
+                text-shadow: 0 0 20px black;
+                transition: all 0.5s;
+            }
+
+            .hover:hover {
+                opacity: 1;
+            }
+        }
+
+        .drums {
+            background-image: url("../img/drums.jpg"); 
+        }
+
+        .bass {
+            background-image: url("../img/MMa.jpg");
+        }
+
+        .guitar {
+            background-image: url("../img/fendera.jpg");
+        }
+
+        .synth {
+            background-image: url("../img/syntha.jpg");
+        }
+
+        .akordeon {
+            background-image: url("../img/hohnera.jpg");
+        }
+    }
+
+    @media all and (max-width: $medium) {
+        .instruments {
+            
+            .instrument {
+                width: 200px;
+                height: 200px;
+
+                .hover {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

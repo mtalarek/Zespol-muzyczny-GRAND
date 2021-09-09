@@ -1,0 +1,804 @@
+/* Colors */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  background: transparent;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover, a:active {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: white;
+  text-shadow: 0px 0px 20px black;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+section {
+  margin: 80px auto;
+}
+
+hr {
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-width: 0;
+  border: 1px solid #53a502;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  /* border-bottom: 1px solid rgb(117, 117, 117); */
+  background-color: #f6f6f6;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: black;
+}
+
+header {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  position: relative;
+}
+
+header .img-back {
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+}
+
+header .img-text {
+  position: absolute;
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  flex-direction: column;
+}
+
+header .img-text .box {
+  text-align: center;
+}
+
+header .img-text .box h1 {
+  font-weight: 300;
+  line-height: 1.8;
+  text-shadow: 0 0 50px black;
+  margin-bottom: 30px;
+}
+
+header .img-text .box p {
+  margin-bottom: 80px;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+header .img-text .box button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media all and (max-width: 850px) {
+  header h1 {
+    font-size: 30px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  header .img-text {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.about {
+  width: 80%;
+  text-align: center;
+}
+
+.about .nav {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.about .nav p {
+  margin-top: 50px;
+}
+
+.about .items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.about .items .item {
+  flex-basis: 28%;
+}
+
+.about .items .item i {
+  color: #53a502;
+  font-size: 40px;
+}
+
+@media all and (max-width: 500px) {
+  .about .nav {
+    width: 100%;
+  }
+  .about .items {
+    flex-direction: column;
+  }
+  .about .items .item {
+    flex-basis: 100%;
+  }
+}
+
+.band {
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.band .instruments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.band .instruments .instrument {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  position: relative;
+}
+
+.band .instruments .instrument .hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(83, 165, 2, 0.9);
+  border-radius: 50%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-shadow: 0 0 20px black;
+  transition: all 0.5s;
+}
+
+.band .instruments .instrument .hover:hover {
+  opacity: 1;
+}
+
+.band .instruments .drums {
+  background-image: url("../img/drums.jpg");
+}
+
+.band .instruments .bass {
+  background-image: url("../img/MMa.jpg");
+}
+
+.band .instruments .guitar {
+  background-image: url("../img/fendera.jpg");
+}
+
+.band .instruments .synth {
+  background-image: url("../img/syntha.jpg");
+}
+
+.band .instruments .akordeon {
+  background-image: url("../img/hohnera.jpg");
+}
+
+@media all and (max-width: 850px) {
+  .band .instruments .instrument {
+    width: 200px;
+    height: 200px;
+  }
+  .band .instruments .instrument .hover {
+    font-size: 20px;
+  }
+}
+
+.video-section {
+  width: 100%;
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.video-section hr {
+  margin-bottom: 0;
+}
+
+.video-section .videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.video-section .videos .video {
+  flex-basis: 48%;
+  margin-top: 50px;
+  width: 50vw;
+  height: 28.13vw;
+}
+
+@media all and (max-width: 500px) {
+  .video-section .videos .video {
+    flex-basis: 100%;
+    height: 56.25vw;
+  }
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  margin-top: 50px;
+}
+
+.contact .contact-header {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact .container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.contact .container .img-container {
+  flex-basis: 50%;
+  position: relative;
+  max-width: 650px;
+  height: 500px;
+}
+
+.contact .container .img-container .img {
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/tama.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact .container .form {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .container .form form {
+  width: 80%;
+}
+
+.contact .container .form form input,
+.contact .container .form form textarea {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.contact .container .form form label {
+  font-size: 15px;
+}
+
+.contact .container .form form .form-field {
+  width: 100%;
+}
+
+@media all and (max-width: 850px) {
+  .contact .container .img-container {
+    height: 350px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .contact .container .img-container {
+    display: none;
+  }
+  .contact .container .form {
+    flex-basis: 100%;
+  }
+}
+
+.comments {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 80px 0;
+}
+
+.comments #list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 35px 100px;
+}
+
+.comments #list li {
+  border-bottom: 1px solid gray;
+  padding: 15px;
+}
+
+.comments .formContainer {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+}
+
+.comments .formContainer .formComments {
+  display: flex;
+  flex-direction: column;
+}
+
+.comments .formContainer .formComments label {
+  font-size: 15px;
+}
+
+.comments .formContainer .formComments input,
+.comments .formContainer .formComments textarea {
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.comments .formContainer .formComments input[type=submit] {
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media all and (max-width: 850px) {
+  .comments #list {
+    margin: 35px 40px;
+  }
+  .comments .formContainer {
+    width: 70%;
+  }
+}
+
+.team {
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team .instruments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.team .instruments .instrument {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+  position: relative;
+  transition: all 0.7s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .instruments .instrument .hover {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top: 0;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #53a502;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0 0 20px black;
+  transition: all 0.7s;
+}
+
+.team .instruments .instrument .hover h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.team .instruments .instrument .hover h4 {
+  margin: 0;
+}
+
+.team .instruments .instrument:hover {
+  margin-bottom: 170px;
+}
+
+.team .instruments .instrument:hover .hover {
+  top: 150px;
+  opacity: 0.9;
+}
+
+.team .instruments .drums {
+  background-image: url("../img/sylwek.jpg");
+}
+
+.team .instruments .bass {
+  background-image: url("../img/michal.jpg");
+}
+
+.team .instruments .guitar {
+  background-image: url("../img/marcin.jpg");
+}
+
+.team .instruments .synth {
+  background-image: url("../img/darek.jpg");
+}
+
+.team .instruments .akordeon {
+  background-image: url("../img/arek.jpg");
+}
+
+@media all and (max-width: 850px) {
+  .team .instruments .instrument {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .team .instruments .instrument .hover h3 {
+    font-size: 20px;
+  }
+  .team .instruments .instrument .hover h4 {
+    font-size: 15px;
+  }
+}
+
+.btn-primary, .btn-secondary {
+  border-radius: 30px;
+  border: none;
+  padding: 10px 40px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 21px;
+  transition: all 0.2s;
+}
+
+@media (max-width: 850px) {
+  .btn-primary, .btn-secondary {
+    font-size: 13px;
+  }
+}
+
+/*
+.btn-primary {
+    @extend %btn;
+    background-color: $primary-color;
+
+    &:hover {
+        background-color: $button-color;
+    }
+} */
+.btn-primary {
+  background-color: #53a502;
+}
+
+.btn-primary:hover {
+  background-color: lightgreen;
+}
+
+.btn-secondary {
+  background-color: #e72828;
+}
+
+.btn-secondary:hover {
+  background-color: #e45656;
+}
+/*# sourceMappingURL=style.css.map */
