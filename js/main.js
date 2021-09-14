@@ -1,3 +1,20 @@
+/* Mobile menu */
+
+let mobileHolder = document.getElementById('holder');
+let mobileMenu = document.getElementsByClassName('mobile-menu');
+
+
+const open = function() {
+    mobileMenu[0].classList.toggle("open");
+}
+mobileHolder.addEventListener('click', open);
+
+const close = function() {
+    mobileMenu[0].classList.toggle("open");
+}
+mobileMenu[0].addEventListener('click', close);
+
+
 /* Komentarze */
 
 let btn = document.getElementById('button');

@@ -7,20 +7,85 @@ nav {
     z-index: 200;
     background-color: $background-color;
 
-    ul {
-        list-style: none;
-        padding: 0 20px;
-        text-transform: uppercase;
-
-        li {
-            display: inline-block;
+    .menu,
+    .logo{
+        ul {
+            list-style: none;
             padding: 0 20px;
+            text-transform: uppercase;
 
-            a {
-                text-decoration: none;
-                font-size: 13px;
-                color: black;
+            li {
+                display: inline-block;
+                padding: 0 20px;
+
+                a {
+                    text-decoration: none;
+                    font-size: 13px;
+                    color: black;
+                }
             }
+        }    
+    }
+    
+    .menu-holder {
+        font-size: 25px;
+        display: none;
+        
+        
+        #holder {
+            margin: 12px 20px;  
+            list-style-type: none;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: $primary-color;
+            margin: 0;
+            list-style-type: none;
+            text-align: right;
+            padding: 0 20px 20px 20px;
+            text-transform: uppercase;
+            line-height: 50px;
+            width: 400px;
+            display: none;
+
+            &.open {
+                display: block;
+            }
+            
+            li {
+                padding: 10px 0;
+
+                &:first-child {
+                    padding-top: 5px;
+                }
+
+                i {
+                    cursor: pointer;
+                }
+                
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 300;
+                    font-size: 40px;
+                    
+                }
+            }
+        }
+        
+    }
+
+    @media all and (max-width: $medium) {
+        .menu {
+            display: none;
+        }
+        .menu-holder {
+            display: block;
         }
     }
 }
