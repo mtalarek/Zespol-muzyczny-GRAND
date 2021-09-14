@@ -610,7 +610,7 @@ header .img-text .box button {
 .contact .container .img-container {
   flex-basis: 50%;
   position: relative;
-  max-width: 650px;
+  max-width: 600px;
   height: 450px;
 }
 
