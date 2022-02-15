@@ -3,6 +3,18 @@ Cała strona od projektowania po zaprogramowanie jest wykonana w całości przez
 Wiem, że dałoby się coś poprawić :-) na pewno sekcja komentarzy wymaga podpięcia pod bazę danych - ale na to jeszcze brakuje mi umiejętności. 
 Zapraszam -->
 
+
+<!-- Captcha -->
+<!-- <?php
+    $secret = "6LeUNmYeAAAAABX2clqQr1czlvPQ7N2gUK8hNSKO";
+    $sprawdz = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
+    $odpowiedz = json_decode($sprawdz);
+?> -->
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,11 +26,12 @@ Zapraszam -->
     <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@300;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     
 </head>
@@ -63,9 +76,19 @@ Zapraszam -->
         </div>
         <div class="img-text">
             <div class="box">
-               <h1>Zespół muzyczny na Twoje przyjęcie! </h1> 
-               <p>muzyka 100% na żywo!</p>
-               <a href="#contact" class="btn-secondary">Zapytaj o termin</a>
+               <h1>Zespół muzyczny na Twoje przyjęcie! </h1>
+               <div class="head-slide">
+                    <div class="cont">
+                        <div class="v-slider-frame col-sm-3 offset-sm-3">
+                            <ul id="v-slides" class="v-slides">
+                                <li id="v-slide" class="v-slide">Muzyka 100% na żywo!</li>
+                                <li id="v-slide" class="v-slide">Najnowsze hity!</li>
+                                <li id="v-slide" class="v-slide">10 lat doświadczenia!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a href="#contact" class="btn-secondary">Zapytaj o termin</a>
             </div>
         </div>
     </header>
@@ -206,8 +229,9 @@ Zapraszam -->
         <div class="img-container">
             <div class="img"></div>
         </div>
-        <div class="form">
+        <div class="form" id="form">
             <form action="https://formspree.io/f/myylkkkr" method="POST" target="_blank">
+            <!-- <form onsubmit="return submitUserForm();" method="POST" target="_blank"> -->
                     <label for="name">Imię i nazwisko</label>
                     <input type="text" id="appointment-name"  name="name" class="form-field" required>
                     
@@ -227,12 +251,57 @@ Zapraszam -->
                     <label for="message">Treść wiadomości</label>
                     <textarea name="notes" id="message" class="form-field"></textarea>
 
+                    <!-- <div class="g-recaptcha" data-sitekey="6LeUNmYeAAAAAF4lXJ1ytIDRERMWRnegwT9Dw4-f" data-callback="verifyCaptcha"></div>
+                    <div id="g-recaptcha-error"></div> -->
+
+                    <!-- <script>
+                    function submitUserForm() {
+                        let response = grecaptcha.getResponse();
+                        if(response.length == 0) {
+                            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red">Potwierdż że nie jesteś botem</span>';
+                            return false;
+                        }
+                        return true;
+                    }
+
+                    function verifyCaptcha() {
+                        document.getElementById('g-recaptcha-error').innerHTML = '';
+                    }
+
+                    function sendMail() {
+                        let link = "mailto:me@example.com"
+                        +"?cc=talar"
+                        + encodeURIComponent(document.getElementById('form').value);
+                        window.location.href = link;
+                    }
+                    </script> -->
+
                     <button type="submit" id="btn-send" class="btn-primary">wyślij</button>
             </form>
         </div>
     </div>
 </section>
 
+<footer>
+
+    <div class="yt socjal">
+        <a href="https://www.youtube.com/channel/UC-he3M6rT9d2EozPExLs6Ww/videos" class="socjallink" target="_blank"> <i class="fab fa-youtube"></i> </a>
+    </div>
+
+
+    <div class="fb socjal">
+        <a href="https://www.facebook.com/GrandGarwolin" class="socjallink" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+    </div>
+
+
+    <div class="gplus socjal">
+        <a href="gplus.html" class="socjallink" target="_blank"> <i class="fab fa-google-plus-g"></i> </a>
+    </div>
+
+
+</footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

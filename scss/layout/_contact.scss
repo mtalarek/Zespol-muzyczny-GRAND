@@ -1,5 +1,6 @@
 .contact {
     text-align: center;
+    margin-bottom: 0;
 
     p {
         margin-top: 50px;
@@ -58,6 +59,10 @@
 
                 .form-field {
                     width: 100%;
+                }
+
+                .g-recaptcha {
+                    margin-bottom: 15px;
                 }
             }
         }

@@ -1,0 +1,55 @@
+footer {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 40px 0;
+    width: 100%;
+
+    .socjal {
+        width: 217px;
+        margin: 10px;
+        height: 142px;
+        transition: all 0.2s;
+        
+
+        a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .socjallink {
+            color: white;
+            font-size: 50px;
+        }
+    }
+
+    .yt {	
+	background-color: #b94348;
+
+        &:hover {
+            background-color: #a83237;
+        }
+    }
+
+    .fb {	
+        background-color: #4668b3;
+    
+        &:hover {
+            background-color: #3557a2;
+        }
+    }
+
+    .gplus {	
+        background-color: #d95333;
+    
+        &:hover {
+            background-color: #c84222
+        }
+    }
+}

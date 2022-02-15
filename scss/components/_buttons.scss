@@ -19,15 +19,15 @@
     background-color: $primary-color;
 
     &:hover {
-        background-color: lightgreen;
+        background-color: $primary-color-hover;
     }
 }
 
 .btn-secondary {
     @extend %btn;
-    background-color: rgb(231, 40, 40);
+    background-color: $secondary-color;
 
     &:hover {
-        background-color: rgb(228, 86, 86);
+        background-color: $secondary-color-hover;
     }
 }

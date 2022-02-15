@@ -34,11 +34,28 @@ header {
                 margin-bottom: 30px;
             }
 
-            p {
-                margin-bottom: 80px;
-                color: white;
-                font-size: 25px;
-                font-weight: 300;
+            .head-slide {
+                padding-bottom: 40px;
+                
+                .v-slider-frame {
+                    border: 0px solid #4BB3FD;
+                    height: 50px;
+                    overflow: hidden;
+                    text-align: center;
+                }
+
+                ul.v-slides {
+                    list-style-type: none;
+                    transform: translateY(50px);
+                    padding:0;
+                    margin: 0;
+                }
+
+                .v-slide {
+                    font-size: 24px;
+                    line-height: 50px;
+                    color: #fff;
+                }
             }
     
             button {

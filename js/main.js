@@ -15,12 +15,39 @@ const close = function() {
 mobileMenu[0].addEventListener('click', close);
 
 
+/* Header-slide */
+
+let vsOpts = {
+    $slides: $('.v-slide'),
+    $list: $('.v-slides'),
+
+    slid: document.getElementById('v-slide'),
+
+    duration: 8,
+    lineHeight: 50
+    };
+
+    console.log(vsOpts.$slides);
+    console.log(vsOpts);
+  
+  let vSlide = new TimelineMax({
+    paused: true,
+    repeat: -1
+  });
+  
+  vsOpts.$slides.each(function(i) {
+    vSlide.to(vsOpts.$list, vsOpts.duration / vsOpts.$slides.length, {
+      y: i * -1 * vsOpts.lineHeight,
+      ease: Elastic.easeOut.config(1, 0.4)
+    });
+  });
+vSlide.play();
+
+
 /* Komentarze */
 
 let btn = document.getElementById('button');
 let lista = document.getElementById('list');
-
-console.log(lista);
 
 const dodawanie = function(e) {
     e.preventDefault();
@@ -33,21 +60,11 @@ const dodawanie = function(e) {
     let miesiacKomentarza = data.getMonth();
     let dzienKomentarza = data.getDate();
 
-    if(miesiacKomentarza == 0) miesiacKomentarza = "styczeń";
-    if(miesiacKomentarza == 1) miesiacKomentarza = "luty";
-    if(miesiacKomentarza == 2) miesiacKomentarza = "marzec";
-    if(miesiacKomentarza == 3) miesiacKomentarza = "kwiecień";
-    if(miesiacKomentarza == 4) miesiacKomentarza = "maj";
-    if(miesiacKomentarza == 5) miesiacKomentarza = "czerwiec";
-    if(miesiacKomentarza == 6) miesiacKomentarza = "lipiec";
-    if(miesiacKomentarza == 7) miesiacKomentarza = "sierpień";
-    if(miesiacKomentarza == 8) miesiacKomentarza = "wrzesień";
-    if(miesiacKomentarza == 9) miesiacKomentarza = "październik";
-    if(miesiacKomentarza == 10) miesiacKomentarza = "listopad";
-    if(miesiacKomentarza == 11) miesiacKomentarza = "grudzień";
+    let month = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
 
-    let dataKomentarza = `(`+dzienKomentarza+` `+miesiacKomentarza+` `+rokKomentarza+`)`;
+    let dataKomentarza = `(`+dzienKomentarza+` `+month[miesiacKomentarza]+` `+rokKomentarza+`)`;
     
+
     /* Dodanie komentarza do listy */
 
     let komentarz = document.getElementById('comment').value;
@@ -58,10 +75,13 @@ const dodawanie = function(e) {
         if(imie.length == 0)  alert("Wpisz imię");   
     } else {
         let liElement = document.createElement('li');
-        let komentarzNode = document.createTextNode(`"`+ komentarz + `"` + ` - ` + imie + ` ` + dataKomentarza);
+        let komentarzNode = document.createTextNode(`"${komentarz}" - ${imie} ${dataKomentarza}`);
         liElement.appendChild(komentarzNode);
         lista.appendChild(liElement);    
     }
 }
 
 btn.addEventListener('click', dodawanie);
+
+
+

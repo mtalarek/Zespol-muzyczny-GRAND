@@ -1,6 +1,11 @@
 .about {
-    width: 80%;
+    width: 100%;
     text-align: center;
+    background-color: $background-color;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0;
+
     
     .nav {
         width: 60%;
@@ -12,9 +17,12 @@
     }
 
     .items {
+        width: 80%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         margin-top: 60px;
+        
 
         .item {
             flex-basis: 28%;

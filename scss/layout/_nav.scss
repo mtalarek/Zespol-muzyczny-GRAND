@@ -13,15 +13,24 @@ nav {
             list-style: none;
             padding: 0 20px;
             text-transform: uppercase;
+            margin: 0;
 
             li {
                 display: inline-block;
-                padding: 0 20px;
+                margin: 12px 0 15px 0;
+
 
                 a {
                     text-decoration: none;
                     font-size: 13px;
                     color: black;
+                    padding: 16px 20px;
+                    transition: .2s linear;
+                    height: 13px;
+
+                    &:hover {
+                        background-color: rgb(214, 214, 214);
+                    }   
                 }
             }
         }    
@@ -33,7 +42,7 @@ nav {
         
         
         #holder {
-            margin: 12px 20px;  
+            margin: 8px 20px;  
             list-style-type: none;
             padding: 0;
             cursor: pointer;
