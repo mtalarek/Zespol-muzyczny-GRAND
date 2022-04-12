@@ -46,15 +46,15 @@ vSlide.play();
 
 /* Komentarze */
 
-let btn = document.getElementById('button');
+/* let btn = document.getElementById('button');
 let lista = document.getElementById('list');
 
 const dodawanie = function(e) {
-    e.preventDefault();
+    e.preventDefault(); */
     
     /* Data komentarza */
 
-    let data = new Date();
+    /* let data = new Date();
 
     let rokKomentarza = data.getFullYear();
     let miesiacKomentarza = data.getMonth();
@@ -62,12 +62,12 @@ const dodawanie = function(e) {
 
     let month = ['styczeń', 'luty', 'marzec', 'kwiecień', 'maj', 'czerwiec', 'lipiec', 'sierpień', 'wrzesień', 'październik', 'listopad', 'grudzień'];
 
-    let dataKomentarza = `(`+dzienKomentarza+` `+month[miesiacKomentarza]+` `+rokKomentarza+`)`;
+    let dataKomentarza = `(`+dzienKomentarza+` `+month[miesiacKomentarza]+` `+rokKomentarza+`)`; */
     
 
     /* Dodanie komentarza do listy */
 
-    let komentarz = document.getElementById('comment').value;
+    /* let komentarz = document.getElementById('comment').value;
     let imie = document.getElementById('name').value;
 
     if((komentarz.length == 0) | (imie.length == 0)) {
@@ -81,7 +81,7 @@ const dodawanie = function(e) {
     }
 }
 
-btn.addEventListener('click', dodawanie);
+// btn.addEventListener('click', dodawanie); */
 
 
 

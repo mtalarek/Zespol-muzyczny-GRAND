@@ -18,6 +18,9 @@
         display: flex;
         text-align: left;
         align-items: center;
+        position: relative;
+
+        
 
         .img-container {
             flex-basis: 50%;
@@ -35,7 +38,17 @@
             position: absolute;
             top: 0;
             left: 0;
-            } 
+            }
+
+            .drums {
+                z-index: 100;
+                position: absolute;
+                left: 20px;
+                top: 320px;
+                font-size: 15px;
+                padding: 10px 40px;
+                text-align: center;
+            }
         }
         
         .form {
@@ -70,6 +83,11 @@
         @media all and (max-width: $medium) {
             .img-container {
                 height: 350px;
+
+                .drums {
+                    top: 250px;
+                    font-size: 13px;
+                }
             }
         }
 

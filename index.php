@@ -1,20 +1,3 @@
-<!-- Witam, 
-Cała strona od projektowania po zaprogramowanie jest wykonana w całości przeze mnie.
-Wiem, że dałoby się coś poprawić :-) na pewno sekcja komentarzy wymaga podpięcia pod bazę danych - ale na to jeszcze brakuje mi umiejętności. 
-Zapraszam -->
-
-
-<!-- Captcha -->
-<!-- <?php
-    $secret = "6LeUNmYeAAAAABX2clqQr1czlvPQ7N2gUK8hNSKO";
-    $sprawdz = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
-    $odpowiedz = json_decode($sprawdz);
-?> -->
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +16,6 @@ Zapraszam -->
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-    
 </head>
 <body>
     <nav>
@@ -207,15 +189,19 @@ Zapraszam -->
 
         
         <ul id="list">
-            <li>"Polecam! Wspaniała oprawa przyjęć weselnych na poziomie! Dziękuję Wam bardzo, było znakomicie!" - Ania (1 sierpień 2021)</li>
+
+            <?php
+                require_once "comments.php";
+            ?>
+
         </ul>
         <div class="formContainer">
-            <form action="#" class="formComments">
+            <form action="sendComment.php" method="post" class="formComments">
                 <label for="coment">Wpisz komentarz</label>
                 <textarea name="comment" id="comment" cols="30" rows="5" required></textarea>
                 <label for="name">Twoje imię</label>
-                <input type="text" id="name" required>
-                <input type="submit" class="btn-primary" value="Dodaj" id="button">
+                <input type="text" id="name" name="name" required>
+                <input type="submit" class="btn-primary" value="Dodaj" id="buttonn">
             </form>
         </div>
     </section>
@@ -226,57 +212,26 @@ Zapraszam -->
         <p>zapytaj o wolny termin i szczegóły oferty zespołu</p>    
     
     <div class="container">
+        
         <div class="img-container">
             <div class="img"></div>
+            <a href="drums/index.html" type="submit" class="drums btn-secondary">zagraj na perkusji<br>online!</a>
         </div>
         <div class="form" id="form">
             <form action="https://formspree.io/f/myylkkkr" method="POST" target="_blank">
-            <!-- <form onsubmit="return submitUserForm();" method="POST" target="_blank"> -->
-                    <label for="name">Imię i nazwisko</label>
-                    <input type="text" id="appointment-name"  name="name" class="form-field" required>
-                    
-                    <label for="email">Adres email</label>
-                    <input type="email" id="email" name="email" class="form-field" required>
-                    
-                    <!-- <label for="day">Zaznacz ilość dni</label><br>
-                    <input type="checkbox" id="appointment-service" name="day" class="form-field-check"></input>
-                    <label for="day">1 dzień - wesele</label>
-                    <br>
-                    <input type="checkbox" id="appointment-service" name="days" class="form-field-check"></input>
-                    <label for="days">2 dni - wesele z poprawinami</label> -->
+                <label for="name">Imię i nazwisko</label>
+                <input type="text" id="appointment-name"  name="name" class="form-field" required>
                 
-                    <label for="date">Data przyjęcia</label>
-                    <input type="date" name="date" id="date" class="form-field" required>
+                <label for="email">Adres email</label>
+                <input type="email" id="email" name="email" class="form-field" required>
+                                
+                <label for="date">Data przyjęcia</label>
+                <input type="date" name="date" id="date" class="form-field" required>
 
-                    <label for="message">Treść wiadomości</label>
-                    <textarea name="notes" id="message" class="form-field"></textarea>
+                <label for="message">Treść wiadomości</label>
+                <textarea name="notes" id="message" class="form-field"></textarea>
 
-                    <!-- <div class="g-recaptcha" data-sitekey="6LeUNmYeAAAAAF4lXJ1ytIDRERMWRnegwT9Dw4-f" data-callback="verifyCaptcha"></div>
-                    <div id="g-recaptcha-error"></div> -->
-
-                    <!-- <script>
-                    function submitUserForm() {
-                        let response = grecaptcha.getResponse();
-                        if(response.length == 0) {
-                            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red">Potwierdż że nie jesteś botem</span>';
-                            return false;
-                        }
-                        return true;
-                    }
-
-                    function verifyCaptcha() {
-                        document.getElementById('g-recaptcha-error').innerHTML = '';
-                    }
-
-                    function sendMail() {
-                        let link = "mailto:me@example.com"
-                        +"?cc=talar"
-                        + encodeURIComponent(document.getElementById('form').value);
-                        window.location.href = link;
-                    }
-                    </script> -->
-
-                    <button type="submit" id="btn-send" class="btn-primary">wyślij</button>
+                <button type="submit" id="btn-send" class="btn-primary">wyślij</button>
             </form>
         </div>
     </div>
@@ -284,20 +239,23 @@ Zapraszam -->
 
 <footer>
 
-    <div class="yt socjal">
-        <a href="https://www.youtube.com/channel/UC-he3M6rT9d2EozPExLs6Ww/videos" class="socjallink" target="_blank"> <i class="fab fa-youtube"></i> </a>
+    <h2>wiecej tu!</h2><hr>
+
+    <div class="socjal-container">
+        <div class="yt socjal">
+            <a href="https://www.youtube.com/channel/UC-he3M6rT9d2EozPExLs6Ww/videos" class="socjallink" target="_blank"> <i class="fab fa-youtube"></i> </a>
+        </div>
+    
+        <div class="fb socjal">
+            <a href="https://www.facebook.com/GrandGarwolin" class="socjallink" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+        </div>
+    
+        <div class="gplus socjal">
+            <a href="gplus.html" class="socjallink" target="_blank"> <i class="fab fa-google-plus-g"></i> </a>
+        </div>
     </div>
 
-
-    <div class="fb socjal">
-        <a href="https://www.facebook.com/GrandGarwolin" class="socjallink" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
-    </div>
-
-
-    <div class="gplus socjal">
-        <a href="gplus.html" class="socjallink" target="_blank"> <i class="fab fa-google-plus-g"></i> </a>
-    </div>
-
+    <p>©Copyright 2021</p>
 
 </footer>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
